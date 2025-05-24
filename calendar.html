@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Я накормил кота!</title>
+  <title>gooseberry calendar</title>
   <style>
     @page {
       size: A4;
@@ -14,29 +14,20 @@
       padding: 1cm;
       box-sizing: border-box;
       position: relative;
-      width: 210mm;
-      height: 297mm;
-      font-size: 12px;
-      background-color: #fff;
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(200, 200, 255, 0.2) 10px,
-        rgba(200, 200, 255, 0.2) 20px
-      );
+      min-height: 297mm;
+      min-width: 210mm;
     }
 
     .label-box {
       position: absolute;
-      top: 1cm;
-      right: 1cm;
-      width: 120mm;
-      height: 20mm;
+      top: 30px;
+      right: 38px;
+      width: 350px;
+      height: 60px;
       border: 2px dashed #000;
       text-align: center;
-      line-height: 20mm;
-      font-size: 16px;
+      line-height: 56.69px;
+      font-size: 18px;
       font-weight: bold;
       background-color: #fff;
       z-index: 1000;
@@ -44,23 +35,22 @@
 
     .cat-image {
       position: absolute;
-      top: 1cm;
-      left: 1cm;
-      width: 120mm;
-      height: 20mm;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/640px-Cat03.jpg ');
+      top: 30px;
+      left: 38px;
+      width: 350px;
+      height: 60px;
+      background-image: url('./images/gooseberry.jpg');
       background-size: cover;
       background-position: center;
       z-index: 1000;
-      border: 1px solid #ccc;
+      border: 2px solid #000;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       page-break-inside: auto;
-      margin-top: 25mm;
-      table-layout: fixed;
+      margin-top: 70px;
     }
 
     thead {
@@ -82,38 +72,35 @@
 
     .header-cell {
       background-color: #f2f2f2;
-      font-size: 14px;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="cat-image"></div>
-  <div class="label-box"></div>
-
-  <table>
-    <thead>
-      <tr>
-        <th class="header-cell">🗓</th>
-        <th class="header-cell">☀️</th>
-        <th class="header-cell">🌑</th>
-        <th class="header-cell">😋</th>
-      </tr>
-    </thead>
-    <tbody>
-      <script>
-        for (let i = 1; i <= 30; i++) {
-          document.write(`
-            <tr>
-              <td>${i}</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          `);
-        }
-      </script>
-    </tbody>
-  </table>
+    <div class="cat-image"></div>
+    <div class="label-box"></div>
+    <table>
+        <thead>
+        <tr>
+            <th class="header-cell">🗓</th>
+            <th class="header-cell">☀️</th>
+            <th class="header-cell">🌑</th>
+            <th class="header-cell">😋</th>
+        </tr>
+        </thead>
+        <tbody>
+        <script>
+            for (let i = 1; i <= 30; i++) {
+            document.write(`
+                <tr>
+                <td>${i}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+            `);
+            }
+        </script>
+        </tbody>
+    </table>
 </body>
 </html>
